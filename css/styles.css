@@ -1,3 +1,4 @@
+/*-----------------------------------------Global-----------------------------------------*/
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
@@ -11,6 +12,66 @@ a {
 
 ul {
     list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*---------------------------------------Header------------------------------------------*/
+
+.page-header {
+    border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-link {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.address {
+    margin-left: auto;
+}
+
+.address-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
 }
 
 .header-logo {
@@ -23,19 +84,11 @@ ul {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-align: left;
+    padding: 24px 0;
+    margin-right: 76px;
 }
 
-.footer-logo {
-    font-family: "Raleway", sans-serif;
-    color: #F4F4FD;
-    font-size: 18px;
-    font-weight: 700;
-    font-style: normal;
-    text-transform: uppercase;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-align: left;
-}
+
 
 .header-logo .part-of-link,
 .footer-logo .part-of-link {
@@ -43,6 +96,7 @@ ul {
 }
 
 .link {
+    display: block;
     color: #2E2F42;
     font-weight: 500;
     font-style: normal;
@@ -50,6 +104,7 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: left;
+    padding: 24px 0;
 
 }
 
@@ -63,7 +118,9 @@ ul {
 
 }
 
-.address a {
+.address-link {
+    display: block;
+    padding: 24px 0;
     color: #434455;
     font-weight: 400;
     font-style: normal;
@@ -73,16 +130,19 @@ ul {
     text-align: left;
 }
 
-.address a:hover,
-.address a:focus {
+.address-link:hover,
+.address-link:focus {
     color: #404BBF;
 }
 
+/*------------------------------------------------------Main------------------------------------------------*/
+
 .main-section {
     background-color: #2E2F42;
+    padding: 188px 0;
 }
 
-.main-section h1 {
+.main-hero {
     color: #FFFFFF;
     font-weight: 700;
     font-size: 56px;
@@ -91,6 +151,11 @@ ul {
     line-height: 1.07;
     letter-spacing: 0.02em;
     text-align: center;
+    max-width: 496px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px;
 }
 
 .main-btn {
@@ -102,6 +167,17 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.04em;
     text-align: center;
+    border: none;
+    border-radius: 4px;
+    padding: 16px 32px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    display: block;
+    margin: 0 auto;
+    /*align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 10px;*/
 }
 
 .main-btn:hover,
@@ -109,11 +185,45 @@ ul {
     background-color: #404BBF;
 }
 
+/*----------------------------------------Features-------------------------------------------------*/
+
+
+
 .subtitle-cards {
     background-color: #FFFFFF;
 }
 
-.subtitle h3 {
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    ;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+.features-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.features-item {
+    width: calc((100% - 72px)/4);
+    padding: 120px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.features-hero {
     color: #2E2F42;
     font-size: 20px;
     font-weight: 500;
@@ -123,14 +233,21 @@ ul {
     letter-spacing: 0.02em;
 }
 
-.subtitle p {
+.features-text {
     text-transform: none;
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
 
-.subtitle p::first-letter {
+.features-text::first-letter {
     text-transform: uppercase;
+}
+
+/*------------------------------------------------Team-------------------------------------------*/
+
+.subtitle-team {
+    background-color: #F4F4FD;
+    padding: 120px;
 }
 
 .subtitle-hero {
@@ -142,6 +259,31 @@ ul {
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-align: center;
+    margin: 0 auto;
+    padding-bottom: 73px;
+
+}
+
+.subtitle-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.subtitle-cards {
+    display: block;
+    width: calc((100% - 72px)/4);
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.card-content {
+    padding: 32px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .subtitle-team h3 {
@@ -162,8 +304,39 @@ ul {
     text-align: center;
 }
 
-.subtitle-team {
-    background-color: #F4F4FD;
+
+/*-------------------------------------------------------Portfolio---------------------------------------------*/
+
+
+
+.subtitle-portfolio {
+    padding: 120px 0;
+}
+
+.subtitle-hero {
+    padding-bottom: 72px;
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.portfolio-item {
+    width: calc((100% - 48px)/3);
+}
+
+.container-portfolio {
+    border-bottom: 1px solid #E7E9FC;
+    border-left: 1px solid #E7E9FC;
+    border-right: 1px solid #E7E9FC;
+    padding: 32px 16px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .subtitle-portfolio h3 {
@@ -182,9 +355,32 @@ ul {
     letter-spacing: 0.02em;
 }
 
-
+/*----------------------------------------------------Footer----------------------------------------------------*/
 .footer {
     background-color: #2E2F42;
+    padding: 100px 0;
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 264px;
+    gap: 16px;
+    margin: 0 1020px 0 auto;
+}
+
+
+.footer-logo {
+    font-family: "Raleway", sans-serif;
+    color: #F4F4FD;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-align: left;
 }
 
 .footer p {
